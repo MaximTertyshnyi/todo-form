@@ -71,14 +71,3 @@ todo-form/
 ├── tests/         # Tests
 └── package.json   # Dependencies and scripts
 ```
-
-## 🤝 Contributing
-
-1. Fork the project
-2. Create your feature branch
-3. Make your changes
-4. Submit a Pull Request
-
-## 📝 License
-
-MIT
