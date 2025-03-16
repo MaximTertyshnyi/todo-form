@@ -1,0 +1,65 @@
+.TaskInput {
+  position: relative;
+  background-color: white;
+  border-bottom: 1px solid #ededed;
+
+  &__chevron {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #e6e6e6;
+  }
+
+  &__input {
+    width: calc(100% - 100px);
+    border: none;
+    padding: 1rem 1rem 1rem 3.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #4d4d4d;
+    box-sizing: border-box;
+    resize: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-height: 3rem;
+    transition: font-size 0.3s ease;
+
+    &::placeholder {
+      color: #e6e6e6;
+      font-style: italic;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__add-button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #a8a5a5;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      background-color: #147c89;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+      background-color: #175e68;
+    }
+  }
+}

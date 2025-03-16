@@ -1,0 +1,97 @@
+.TaskList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__no-tasks {
+    padding: 1rem;
+    text-align: center;
+    color: #777;
+    font-style: italic;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+    padding: 1rem;
+  }
+
+  &__checkbox {
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #ededed;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--completed {
+      border-color: #bddad5;
+      background-color: #bddad5;
+      color: white;
+    }
+  }
+
+  &__check-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  &__text {
+    margin-left: 1rem;
+    flex: 1;
+    font-size: 1.25rem;
+    color: #4d4d4d;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: calc(100% - 6rem);
+    padding-right: 1rem;
+    cursor: pointer;
+
+    &--completed {
+      color: #d9d9d9;
+      text-decoration: line-through;
+    }
+  }
+
+  &__edit-input {
+    margin-left: 1rem;
+    flex: 1;
+    font-size: 1.25rem;
+    color: #4d4d4d;
+    border: none;
+    outline: none;
+    caret-color: pink;
+    padding-right: 1rem;
+    transition: font-size 0.3s ease-in-out;
+    max-width: calc(100% - 6rem);
+    width: 100%;
+
+    &--active {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__delete-button {
+    background: none;
+    border: none;
+    color: #cc9a9a;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #af5b5e;
+      transform: scale(1.1);
+    }
+  }
+
+  &__trash-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}

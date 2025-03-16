@@ -1,0 +1,128 @@
+.ToDoPage {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+
+  &__container {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 300;
+    color: rgba(175, 47, 47, 0.15);
+  }
+
+  &__card {
+    background-color: white;
+    position: relative;
+    margin-bottom: 50px;
+    isolation: isolate;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: white;
+      box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.13),
+        -2px -4px 4px 0 rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 3px;
+      right: 3px;
+      height: 5px;
+      background: #ffffff;
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+      z-index: -1;
+    }
+
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-shadow {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 6px;
+      right: 6px;
+      height: 5px;
+      background: #ffffff;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      z-index: -2;
+    }
+
+    &_input-completed {
+      padding: 15px 10px;
+      width: auto;
+      text-align-last: end;
+      color: #147c89;
+      border-bottom: 1px solid #ededed;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #777;
+  }
+
+  &__count {
+    flex-shrink: 0;
+  }
+
+  &__filters {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__filter {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #777;
+
+    &--active {
+      border: 1px solid rgba(175, 47, 47, 0.2);
+      border-radius: 3px;
+    }
+
+    &:hover {
+      border-color: rgba(175, 47, 47, 0.1);
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &__clear {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #777;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.ToDoPage__delete-button:hover .ToDoPage__trash-icon {
+  transform: scale(1.15);
+}
